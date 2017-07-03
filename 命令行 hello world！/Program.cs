@@ -8,23 +8,80 @@ using myLibary;
 
 namespace 命令行_hello_world_
 {
-    class Program
+    class Program  
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            double a = match.Add(11, 22);
+        { xiao add = new xiao();
+            int a = add.fum(6, 7);
             Console.WriteLine(a);
-            double b = match.Div(11, 0);
+            int b = add.Sum1To(100);
             Console.WriteLine(b);
-            double c = match.Mul(900,520);
-            Console.WriteLine(c);
-            Form cccc = new Form();
-            cccc.Text = "命令行窗口";
-            cccc.Width = 900;
-            cccc.Height = 900;
-            cccc.ShowDialog();
-        
+            int s = add.fum(100, 200);
+            Console.WriteLine(s);
+            Form f = new Form();
+            f.WindowState = FormWindowState.Normal;
+            //f.ShowDialog();
+            int[] array = new int[100];
+            array[0] = 13;
+            sbyte sb;
+            Console.WriteLine(sizeof(byte));
+            int sss = 100;
+            int ss = -100;
+            string str = Convert.ToString(sss, 2);
+            string str2 = Convert.ToString(ss, 2);
+            Console.WriteLine(str);
+            Console.WriteLine(str2);
+
+
+
+            
+
+
+            
+            
+
+
         }
+    }
+    class xiao
+    {
+        public int fum(int x,int b)
+        {
+            return x + b;
+        }
+
+        //public int Sum1To(int x)
+        //{
+        //    int a = 0;
+        //    for (int i = 0; i <= x; i++)
+        //    {
+        //        a += i;
+        //    }
+        //    return a;
+        //}
+        public int Sum1To(int x)
+        {
+            if (x==1)
+            {
+                return 1;
+            }
+            else
+            {
+                return x + Sum1To(x - 1);      
+            }
+            
+        }
+
+    }
+    class Stod
+    {
+        public static int Amount;
+        public int Age;
+        public string Name;
+        public double Add(double a,double b )
+        {
+            return a + b;
+        }
+
     }
 }
